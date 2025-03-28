@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=3 uid="uid://deih8ij6v4s3p"]
+
+[ext_resource type="PackedScene" uid="uid://b8hcbq0kjne3d" path="res://scenes/ObjLamp.tscn" id="1_ouru0"]
+
+[sub_resource type="StandardMaterial3D" id="1"]
+albedo_color = Color(1, 0.823529, 0.394066, 1)
+
+[node name="World 1" type="Node3D"]
+
+[node name="CSGCombiner" type="CSGCombiner3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.344411, 0)
+use_collision = true
+
+[node name="Room 1" type="CSGBox3D" parent="CSGCombiner"]
+use_collision = true
+size = Vector3(50.736, 25.296, 141.922)
+
+[node name="CSGBox" type="CSGBox3D" parent="CSGCombiner"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.0763, 0, 0)
+size = Vector3(78.275, 25.43, 9)
+material = SubResource("1")
+
+[node name="CSGBox2" type="CSGBox3D" parent="CSGCombiner"]
+transform = Transform3D(0.982048, 0.188633, 0, -0.188633, 0.982048, 0, 0, 0, 1, 49.0969, -6.88846, 0)
+size = Vector3(23.05, 57.3091, 9)
+material = SubResource("1")
+
+[node name="CSGBox" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.7585, -14.8936, 0)
+use_collision = true
+
+[node name="CSGBox2" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43.4397, -14.7482, 0.0791016)
+use_collision = true
+
+[node name="CSGBox3" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50.1718, -14.8936, 0)
+use_collision = true
+size = Vector3(6.792, 1.386, 1)
+
+[node name="CSGBox4" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56.1263, -14.8936, 0)
+use_collision = true
+
+[node name="ObjLamp" parent="." instance=ExtResource("1_ouru0")]

@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://f7p6p5yflosg"]
+
+[ext_resource type="PackedScene" uid="uid://3pydhg6c88kd" path="res://scenes/Player.tscn" id="1_4ck1e"]
+[ext_resource type="PackedScene" uid="uid://deih8ij6v4s3p" path="res://scenes/World 1.tscn" id="2_4txw6"]
+[ext_resource type="PackedScene" uid="uid://dvj45b1afr3hy" path="res://scenes/AreaTrigger.tscn" id="3_hk54q"]
+
+[node name="Level1" type="Node3D"]
+
+[node name="Player" parent="." instance=ExtResource("1_4ck1e")]
+
+[node name="World 1" parent="." instance=ExtResource("2_4txw6")]
+
+[node name="AreaTrigger" parent="." instance=ExtResource("3_hk54q")]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 25.7144, 0.0330887)
+light_energy = 10.0
+omni_range = 50.0
